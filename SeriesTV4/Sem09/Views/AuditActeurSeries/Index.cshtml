@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Sem09.Models.AuditActeurSerie>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Action)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateAction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Acteur)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Serie)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Action)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateAction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Acteur.ActeurId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Serie.SerieId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AuditActeurSerieId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AuditActeurSerieId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AuditActeurSerieId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

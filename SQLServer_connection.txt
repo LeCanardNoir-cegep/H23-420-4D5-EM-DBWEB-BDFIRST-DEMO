@@ -1,0 +1,1 @@
+Data Source=LLBINFD060515\SQLEXPRESS;Initial Catalog=SeriesTV;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False
